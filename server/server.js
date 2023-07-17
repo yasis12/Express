@@ -9,6 +9,6 @@ const port = 5001
 app.use(express.static('server/public'));
 
 // starts up our server
-app.listen(post, () => {
+app.listen(port, () => {
     console.log('Listening on port', port);
 })

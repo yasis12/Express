@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <!-- Google Font (optional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>jQuery Music Theory</h1>
+    </header>
+    <div id="content">
+        <div>
+            <h3>Part 1: Modes</h3>
+            <div>
+                <button onclick="modeButton(1)" class="mode-button">Ionian</button>
+                <button onclick="modeButton(2)" class="mode-button">Dorian</button>
+                <button onclick="modeButton(3)" class="mode-button">Phrygian</button>
+                <button onclick="modeButton(4)" class="mode-button">Lydian</button>
+                <button onclick="modeButton(5)" class="mode-button">Mixolydian</button>
+                <button onclick="modeButton(6)" class="mode-button">Aeolian</button>
+                <button onclick="modeButton(7)" class="mode-button">Locrian</button>
+            </div>
+            <br />
+            <br />
+            <div>
+                <h2 id="selected-mode">
+                    Please Select a Mode
+                </h2>
+            </div>
+        </div>
+        <br />
+        <br />
+        <hr />
+        <br />
+        <div>
+            <h3>Part 2: Notes</h3>
+            <div>
+                <button onclick="addThisMusicalNote('A')" class="note-button">A</button>
+                <button onclick="addThisMusicalNote('B')" class="note-button">B</button>
+                <button onclick="addThisMusicalNote('B')" class="note-button">C</button>
+                <button onclick="addThisMusicalNote('D')" class="note-button">D</button>
+                <button onclick="addThisMusicalNote('E')" class="note-button">E</button>
+                <button onclick="addThisMusicalNote('F')" class="note-button">F</button>
+                <button onclick="addThisMusicalNote('G')" class="note-button">G</button>
+            </div>
+            <div id="note-container">
+                <!-- For example -->
+                <div class="music-note">
+                    <h2>A</h2>
+                    <button onclick="removeMusicalNote()" class="remove-note">Remove</button>
+                </div>
+                <div class="music-note">
+                    <h2>B</h2>
+                    <button onclick="removeMusicalNote()" class="remove-note">Remove</button>
+                </div>
+                <div class="music-note">
+                    <h2>A</h2>
+                    <button onclick="removeMusicalNote()" class="remove-note">Remove</button>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <hr />
+        <br />
+        <div>
+            <h3>Part 3: Playlist</h3>
+            <label for="song-name">Song Name</label>
+            <input type="text" id="song-name" />
+            <label for="song-name">Song Duration</label>
+            <input type="text" id="song-duration" />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Duration (minutes)</th>
+                    </tr>
+                </thead>
+                <tbody id="product-table">
+                    <tr>
+                        <td>Sample</td>
+                        <td>3.2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Our JavaScript file -->
+    <script src="scripts/client.js"></script>
+</body>
+
+</html>
+
